@@ -1,0 +1,7 @@
+# Ignore cache files
+/wp-content/cache/
+/wp-content/upgrade/
+/logs
+*.log
+*.sql
+*.env

@@ -7,12 +7,11 @@
 get_header(); // Récupère le header.php du thème
 ?>
 
-<main id="primary" class="site-main">
+<div>
     <!-- Affichage des sections spécifiques au pays -->
     <div class="country-sections">
         <?php
         // Affiche chaque section si elle est configurée dans ACF
-        get_template_part('template-parts/country/banner_country');
         get_template_part('template-parts/country/why-choose');
         get_template_part('template-parts/country/process-section');
         get_template_part('template-parts/country/consultation-section');
@@ -32,7 +31,7 @@ get_header(); // Récupère le header.php du thème
     endif;
     ?>
 
-</main>
+</div>
 
 <?php
 get_footer(); // Récupère le footer.php du thème

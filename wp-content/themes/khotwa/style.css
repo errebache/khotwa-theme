@@ -4,3 +4,96 @@ Author: Mouhcine Errebache
 Version: 1.0
 Description: Thème personnalisé permettant de modifier ahmed texte et images depuis l'administration WordPress.
 */
+/* Basic Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-reset */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+/* Remove default styles for lists */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default styles for links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove default button styles */
+button, input, textarea, select {
+    font: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Table Styles Reset */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+/* Image Reset */
+img, picture, svg, video {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove default border from images */
+img {
+    border-style: none;
+}
+
+/* Form Elements Reset */
+textarea {
+    resize: none;
+}
+
+/* Clear all paddings and margins */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, figure, hr {
+    margin: 0;
+    padding: 0;
+}
+
+/* Full Width for Main Content */
+main {
+    display: block;
+}
+
+/* Basic Box-Sizing Reset */
+html {
+    box-sizing: border-box;
+}
+
+/* Prevent Text Overflow */
+body {
+    word-wrap: break-word;
+}
+
+/* Clear float elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

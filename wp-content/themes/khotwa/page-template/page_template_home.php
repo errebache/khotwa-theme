@@ -7,12 +7,11 @@
 get_header(); // Récupère le header.php du thème
 ?>
 
-<main id="primary" class="site-main">
+<div>
     <!-- Affichage des sections spécifiques au HomePage -->
     <div class="country-sections">
         <?php
         // Affiche chaque section si elle est configurée dans ACF
-        get_template_part('template-parts/home/banner_home');
         get_template_part('template-parts/home/flags_home');
         get_template_part('template-parts/home/process_home');
         get_template_part('template-parts/home/consultation_home');
@@ -31,7 +30,7 @@ get_header(); // Récupère le header.php du thème
     endif;
     ?>
 
-</main>
+</div>
 
 <?php
 get_footer(); // Récupère le footer.php du thème

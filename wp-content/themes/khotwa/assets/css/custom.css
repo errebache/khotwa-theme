@@ -1,59 +1,177 @@
-/* custom.css */
 
-/* Style global du thème */
+html,
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Couleur de fond gris clair */
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Style personnalisé pour le Header */
+body {
+    font-family: 'FF Shamel Sans', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* ------------------------------
+  BANNER SECTION
+------------------------------ */
+.banner_section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* ------------------------------
+  HEADER
+------------------------------ */
 .header {
-    background-color: #343a40; /* Couleur de fond sombre */
-    padding: 10px 0;
+    border: none;
+    font-family: 'FF Shamel Sans', sans-serif;
 }
 
-/* Logo */
-.header .logo a {
-    color: #ffffff;
+.header.rtl {
+    direction: rtl;
+}
+
+/* ------------------------------
+   NAVBAR CONTAINER
+ ------------------------------ */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+/* LOGO */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.navbar-brand a,
+.navbar-brand h1 {
+    color: #fff;
     text-decoration: none;
-    font-size: 24px;
 }
 
-/* Menu principal */
-.header .navbar-nav .nav-link {
-    color: #ffffff;
-    margin-right: 15px;
-    transition: color 0.3s;
+/* ------------------------------
+   BOUTON BURGER (MOBILE)
+------------------------------ */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    right: 25px;
 }
 
-.header.navbar-nav .nav-link:hover {
-    color: #ffc107;
+/* ------------------------------
+   NAVBAR COLLAPSE & MENU
+------------------------------ */
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
-/* Style des boutons */
-.btn-custom {
-    background-color: #007bff;
+.navbar-menu {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar-menu li {
+    display: flex;
+    align-items: center;
     color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
+    position: relative;
 }
 
-.btn-custom:hover {
-    background-color: #0056b3;
+.navbar-menu li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-weight: 400;
 }
 
-/* Pied de page */
-footer {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
+.navbar-menu li a:hover {
+    color: #FFB223;
+    text-decoration: none;
 }
 
-/* Section principale */
+/* ------------------------------
+  CTA BUTTON
+------------------------------ */
+.cta-button {
+    width: 190px;
+    height: auto;
+    border-radius: 32.77px;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+/* Affichage distinct selon le device */
+.cta-button.mobile {
+    display: none;
+}
+
+.cta-button.desktop {
+    display: block;
+}
+
+#closeMenu {
+    display: none
+}
+
+/* ------------------------------
+  main
+------------------------------ */
 main {
-    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+/* ------------------------------
+  FOOTER
+------------------------------ */
+footer {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'FF Shamel Sans', sans-serif;
+}
+.footer .plane {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+.footer iframe {
+    border-radius: 15px;
+}
+.footer.rtl {
+    direction: rtl;
 }

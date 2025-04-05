@@ -1,6 +1,6 @@
 <?php
 // Récupération des champs ACF pour la bannière principale
-$bg_image = get_field('background_image');
+// $bg_image = get_field('background_image');
 $title = get_field('title');
 $subtitle = get_field('subtitle');
 $left_image = get_field('left_image');
@@ -13,16 +13,15 @@ $button_text_color = get_field('button_text_color') ?: '#FFFFFF'; // Couleur par
 $button_text_bgcolor = get_field('button_text_bgcolor') ?: '#FFFFFF'; // Couleur par défaut si non définie
 
 // Vérifications des URLs d'images (tableau ou URL directe)
-$bg_image_url = is_array($bg_image) && isset($bg_image['url']) ? esc_url($bg_image['url']) : esc_url($bg_image);
+// $bg_image_url = is_array($bg_image) && isset($bg_image['url']) ? esc_url($bg_image['url']) : esc_url($bg_image);
 $left_image_url = is_array($left_image) && isset($left_image['url']) ? esc_url($left_image['url']) : esc_url($left_image);
 $right_image_url = is_array($right_image) && isset($right_image['url']) ? esc_url($right_image['url']) : esc_url($right_image);
 $video_image_url = is_array($video_image) && isset($video_image['url']) ? esc_url($video_image['url']) : esc_url($video_image);
 ?>
 
 <!-- Section Bannière -->
-<?php if ($bg_image_url || $title || $subtitle): ?>
-    <section class="banner py-5 text-center text-white"
-             style="background-image: url('<?php echo $bg_image_url; ?>'); background-size: cover; background-position: center;">
+<?php if ($title || $subtitle): ?>
+    <section class="banner py-5 text-center text-white">
         <div class="container">
             <div class="row align-items-center">
 

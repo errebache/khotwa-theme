@@ -1,15 +1,33 @@
-// custom.js
+$(document).ready(function() {
+    const menuToggle = $('.menu-toggle');
+    const closeMenu = $('#closeMenu');
+    const navbarCollapse = $('.navbar-collapse');
 
-// Exécuter ce code après que la page soit entièrement chargée
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Le thème Khotwa est bien chargé !');
 
-    // Exemple : Animation simple sur le bouton personnalisé
-    const buttons = document.querySelectorAll('.btn-custom');
+    menuToggle.on('click', function(event) {
+        event.stopPropagation();
+        console.log("Menu burger cliqué");
+        navbarCollapse.addClass('active'); 
+    });
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            alert('Bouton personnalisé cliqué !');
-        });
+
+    closeMenu.on('click', function() {
+        console.log("Bouton de fermeture cliqué");
+        navbarCollapse.removeClass('active');
+    });
+
+    $(document).on('click', function(event) {
+        if (
+            !navbarCollapse.is(event.target) && 
+            !menuToggle.is(event.target) &&  
+            navbarCollapse.has(event.target).length === 0
+        ) {
+            console.log("Clic à l'extérieur détecté");
+            navbarCollapse.removeClass('active');
+        }
+    });
+
+    navbarCollapse.on('click', function(event) {
+        event.stopPropagation();
     });
 });

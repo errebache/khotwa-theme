@@ -256,3 +256,122 @@ footer {
 .description-row {
   margin-top: 20px;
 }
+
+/* ------------------------------
+   PROCESS SECTION
+------------------------------ */
+
+/* SECTION GLOBALE */
+.three-steps-section {
+  overflow-x: hidden;
+  background-color: #7B041F; 
+  position: relative; /* Permet de positionner les icônes en absolu */
+  padding: 2rem 0;
+}
+
+/* TITRE PRINCIPAL */
+.steps-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ICÔNES DÉCORATIVES */
+.icon-top-left,
+.icon-top-right {
+  position: absolute;
+  /* z-index: 2; Au-dessus du fond */
+}
+.icon-top-left {
+  position: absolute;
+  z-index: 2;
+  top: 170px;
+  left: -105px;
+}
+
+
+.icon-top-right {
+  top: -20px;
+    right: 240px;
+  z-index: 1;
+
+  
+}
+
+.icon-shape {
+  width: 50% ;/* Ajustez la taille selon vos besoins */
+  height: auto;
+  display: block;
+}
+
+/* CONTENEUR DE CHAQUE ÉTAPE */
+.step-box {
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* NUMÉRO DE L’ÉTAPE */
+.step-number {
+  font-size: 2rem;
+  color: #f26522;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* TITRE DE L’ÉTAPE */
+.step-heading {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
+/* IMAGE DE L’ÉTAPE */
+.step-image {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  max-height: 100px;
+}
+
+/* SOUS-TITRE DE L’ÉTAPE */
+.step-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* PARAGRAPHE DESCRIPTIF */
+.step-description {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* BOUTON */
+.main-btn {
+  background-color: #f26522;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  padding: 0.75rem 2rem;
+}
+
+.main-btn:hover {
+  background-color: #d9561d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767.98px) {
+  .steps-title {
+    font-size: 1.5rem;
+  }
+  .icon-shape {
+    width: 40%;
+  }
+}

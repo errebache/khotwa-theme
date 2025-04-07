@@ -146,6 +146,7 @@ if ($default_footer_background) {
     </div>
   </div>
   <div class="plane"></div>
+  <?php get_template_part('template-parts/common/modal'); ?>
 </footer>
 </div>
 <?php wp_footer(); ?>

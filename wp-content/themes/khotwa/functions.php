@@ -48,8 +48,6 @@ function khotwa_enqueue_assets() {
 
     // JS Bootstrap
     wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', array(), null, true);
-
-    // JS perso
     wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/custom.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'khotwa_enqueue_assets');

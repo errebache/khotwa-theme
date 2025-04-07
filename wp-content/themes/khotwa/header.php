@@ -115,7 +115,7 @@
         </header>
 
         <!-- Bannière (exemple pour un pays) -->
-        <?php get_template_part('template-parts/country/banner_country'); ?>
+        <?php get_template_part('template-parts/common/banner'); ?>
     </section>
 
     <!-- MAIN CONTENT -->

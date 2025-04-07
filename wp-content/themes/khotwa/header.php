@@ -127,25 +127,6 @@
         <!-- Bannière (exemple pour un pays) -->
         <?php get_template_part('template-parts/common/banner'); ?>
     </section>
-           
-
-
-                <!-- Bouton CTA pour desktop -->
-                <button class="cta-button desktop">
-                    <?php echo esc_html($cta_button_text); ?>
-                </button>
-            </div>
-        </header>
-
-        <!-- Bannière (exemple pour un pays) -->
-        <?php get_template_part('template-parts/common/banner'); ?>
-    </section>
-
-            <!-- Bannière (exemple pour un pays) -->
-            <?php get_template_part('template-parts/country/banner_country'); ?>
-        </section>
-
-
         <!-- MAIN CONTENT -->
         <main>
             <!-- ... le reste de ton contenu ... -->

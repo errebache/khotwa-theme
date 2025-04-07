@@ -27,6 +27,9 @@ body {
     cursor: pointer;
     margin: 20px 0;
 }
+.mobile {
+    display: none;
+}
 /* ------------------------------
   BANNER SECTION
 ------------------------------ */
@@ -49,6 +52,15 @@ body {
     line-height: 1.5;
     text-align: center;
 }
+.banner_section .cta-banner {
+    background-color: #ffb223;
+    color: #68021a;
+    padding: 10px 29px;
+    border-radius: 34px;
+    min-height: 54px;
+    font-size: 15px;
+    font-weight: bold;
+}
 .banner_section .img_banner,
 .banner .img_banner {
     position: absolute;
@@ -70,8 +82,7 @@ body {
     right: -10px;
 }
 
-.banner_section .left_image,
-.banner .left_image {
+.left_image_banner{
     left: -10px;
 }
 .banner_section .benefit {
@@ -164,7 +175,7 @@ body {
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
-    right: 25px;
+    left: 25px;
 }
 
 /* ------------------------------
@@ -269,8 +280,6 @@ footer {
 .footer.rtl {
     direction: rtl;
 }
-
-=======
 /* ------------------------------
    DESTINATION SECTION
 ------------------------------ */

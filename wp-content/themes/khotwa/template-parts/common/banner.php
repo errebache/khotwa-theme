@@ -38,7 +38,7 @@ $key_benefits = get_field('key_benefits');
 
                 <!-- Image gauche -->
                 <?php if ($left_image_url): ?>
-                    <div class="left_image img_banner">
+                    <div class="left_image_banner desktop img_banner">
                         <img src="<?php echo $left_image_url; ?>" alt="Left Image" class="img-fluid">
                     </div>
                 <?php endif; ?>
@@ -62,7 +62,7 @@ $key_benefits = get_field('key_benefits');
                                 $benefit_text = $benefit['benefit_text'];
                                 $benefit_icon_url = is_array($benefit_icon) && isset($benefit_icon['url']) ? esc_url($benefit_icon['url']) : esc_url($benefit_icon);
                                 ?>
-                                <div class="col-md-3 d-flex align-items-center justify-content-center mb-3">
+                                <div class="col-6 col-md-3 d-flex align-items-center justify-content-center mb-3">
                                     <?php if ($benefit_icon_url): ?>
                                         <img src="<?php echo $benefit_icon_url; ?>" alt="Benefit Icon" class="me-2">
                                     <?php endif; ?>
@@ -78,7 +78,12 @@ $key_benefits = get_field('key_benefits');
                             class="btn btn-warning mb-4">
                             <?php echo esc_html($button_text); ?>
                         </a>
-                        <?php endif; ?> 
+                    <?php endif; ?>
+                    <?php if ($left_image_url): ?>
+                        <div class="left_image_banner mobile img_banner py-5">
+                            <img src="<?php echo $left_image_url; ?>" alt="Left Image" class="img-fluid">
+                        </div>
+                    <?php endif; ?> 
                     <!-- Bouton d'appel à l'action -->
                     <?php if ($is_banner_home_page): ?>      
                         <div class="is_homepage">
@@ -124,7 +129,7 @@ $key_benefits = get_field('key_benefits');
                 </div>
                 <!-- Image droite -->
                 <?php if ($right_image_url): ?>
-                    <div class="right_image img_banner">
+                    <div class="right_image desktop img_banner">
                         <img src="<?php echo $right_image_url; ?>" alt="Right Image" class="img-fluid">
                     </div>
                 <?php endif; ?>

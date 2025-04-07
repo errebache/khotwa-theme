@@ -30,4 +30,25 @@ $(document).ready(function() {
     navbarCollapse.on('click', function(event) {
         event.stopPropagation();
     });
+
+    // video modal
+    $(document).on('click', '.video-trigger', function (e) {
+        e.preventDefault();
+        const videoURL = $(this).data('video-url');
+        if (videoURL) {
+          $('#globalVideoFrame').attr('src', videoURL + '?autoplay=1');
+        }
+      });
+
+      $(document).on('click', '.play-icon', function (e) {
+        e.preventDefault();
+        const videoURL = $(this).data('video-url');
+        if (videoURL) {
+          $('#globalVideoFrame').attr('src', videoURL + '?autoplay=1');
+        }
+      });
+    
+      $('#videoModal').on('hidden.bs.modal', function () {
+        $('#globalVideoFrame').attr('src', '');
+      });
 });

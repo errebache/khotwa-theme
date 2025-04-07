@@ -241,12 +241,12 @@ body {
   main
 ------------------------------ */
 main {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 1000px;
-    padding: 20px;
+    padding: 20px; */
     background-color: #f0f0f0;
 }
 /* ------------------------------
@@ -269,3 +269,87 @@ footer {
 .footer.rtl {
     direction: rtl;
 }
+
+=======
+/* ------------------------------
+   DESTINATION SECTION
+------------------------------ */
+.destination-section {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* Éventuellement, pour s’assurer de couper tout débordement horizontal :
+     overflow-x: hidden; 
+     À activer si nécessaire. */
+}
+
+/* Image de fond en haut : suppression des marges et padding */
+.background-top-destination img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pour remonter la rangée contenant les avatars et le texte */
+.avatar-row {
+  margin-top: -150px; /* Ajustez cette valeur selon votre design */
+}
+
+/* Avatar : dimension fixe pour éviter que le texte ne passe sur une autre ligne */
+.avatar-image {
+  width: 40%; /* Largeur fixe adaptée ; ajustez selon vos besoins */
+  height: auto;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+/* Couleur orange pour le texte de l'avatar */
+.text-orange {
+  color: #FC874D;
+  font-size: 20px;
+}
+
+/* Couleur violette pour le titre */
+.text-violet {
+  color: #7B041F;
+}
+
+/* Titre de la destination */
+.destination-title {
+  margin-bottom: 1.5rem;
+}
+
+/* Position relative pour le conteneur de la carte et du drapeau */
+.position-relative {
+  position: relative;
+}
+
+/* Image de la carte */
+.maps-overlay {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Drapeau positionné sur la carte */
+.flag-overlay {
+  position: absolute;
+  top: -5%;
+  left: 25%;
+  width: 50%;
+  height: auto;
+}
+
+/* Paragraphe descriptif (centré et limité en largeur) */
+.destination-paragraph {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Réduction de l'espace entre les flags et le texte descriptif */
+.description-row {
+  margin-top: 20px;
+}
+

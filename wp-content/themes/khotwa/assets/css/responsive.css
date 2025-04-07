@@ -47,3 +47,57 @@
         font-size: 1.3rem;
     }
 }
+
+/* --------------
+  DESTINATION
+   -------------- */
+
+/* Écran petit : < 768px */
+@media (max-width: 767.98px) {
+    .text-orange{
+      font-size: 10px;
+    }
+    /* Réduire le décalage vertical de la rangée de l’avatar
+       pour éviter un débordement sur mobile */
+    .avatar-row {
+      margin-top: -80px; /* ou -50px si vous préférez moins de chevauchement */
+    }
+  
+    /* Adapter la taille de l’avatar sur mobile */
+    .avatar-image {
+      width: 40px; 
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+  
+    /* Ajuster la taille du titre pour mobile */
+    .destination-title {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    /* Ajuster le drapeau pour éviter qu'il ne dépasse le cadre */
+    .flag-overlay {
+      top: -10%;
+      left: 20%;
+      width: 50%;
+    }
+  
+    /* Paragraphe plus lisible sur mobile */
+    .destination-paragraph {
+      font-size: 0.6rem;
+      line-height: 1.4;
+    }
+  
+    /* Réduire la marge pour rapprocher davantage le texte */
+    .description-row {
+      margin-top: 10px;
+    }
+  
+    /* En cas de débordement persistant, activer ceci :
+       .destination-section {
+         overflow-x: hidden;
+       }
+    */
+  }
+  

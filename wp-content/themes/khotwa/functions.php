@@ -84,3 +84,4 @@ add_action('init', function() {
     $test = get_field('footer_social_title', 'option');
     error_log('footer_social_title from init: ' . $test);
 });
+

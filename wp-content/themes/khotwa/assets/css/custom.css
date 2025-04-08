@@ -5,7 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     /* pour masquer le margin dans toute la page*/
-    overflow-x: hidden;
+   
 }
 
 body {
@@ -647,6 +647,7 @@ footer {
 .footer.rtl {
     direction: rtl;
 }
+
 /* ------------------------------
    DESTINATION SECTION
 ------------------------------ */
@@ -732,11 +733,10 @@ footer {
 /* ------------------------------
    PROCESS SECTION
 ------------------------------ */
-.three-steps-section {
+/* Section Process */
+.process-section {
   position: relative;
   padding: 2rem 0;
-  /* La variable CSS --bg contient l'image de fond définie dynamiquement */
-  background: linear-gradient(rgba(123, 4, 31, 0.7), rgba(123, 4, 31, 0.7)), var(--bg);
   background-size: cover;
   background-position: center;
 }
@@ -761,63 +761,72 @@ footer {
   display: block;
 }
 
-/* Titre et étapes */
+/* Titre de la section et mise en forme globale */
 .steps-title {
   font-size: 2.2rem;
   font-weight: bold;
-  margin: 0;
-  color: #fff;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .step-box {
-  background-color: transparent;
+  background: transparent;
   border-radius: 8px;
   padding: 1.5rem;
 }
-.step-number {
-  font-size: 2rem;
+
+/* Style commun pour le numéro d'étape et le titre */
+.step-number,
+.step-heading {
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.step-heading {
-  font-size: 1.3rem;
-  margin: 10px 0;
-  font-weight: bold;
-  color: #fff;
+
+/* Couleurs spécifiques pour chaque étape (numéros et titres) */
+.step-1 .step-number,
+.step-1 .step-heading {
+  color: #FF69B4; /* Rose */
+}
+.step-2 .step-number,
+.step-2 .step-heading {
+  color: #00dd77; /* Vert */
+}
+.step-3 .step-number,
+.step-3 .step-heading {
+  color: #FFB223; /* Entre l'orange et le jaune */
+}
+
+/* Container de l'image pour forcer une hauteur fixe et aligner les sous-titres */
+.step-image-container {
+  height: 100px; /* Hauteur fixe à ajuster selon vos besoins */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 .step-image {
-  max-width: 150px;
-  height: auto;
+  margin-top: 50px;
+  max-height: 140%;
+  max-width: 100%;
+  object-fit: contain;
   display: block;
-  margin: 0 auto 1rem;
-  max-height: 100px;
+}
+
+/* Sous-titres et descriptions toujours alignés */
+.step-subtitle,
+.step-description {
+  text-align: center;
 }
 .step-subtitle {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #fff;
-  text-align: center;
+  margin-top: 100px;
+
 }
 .step-description {
   font-size: 1rem;
-  color: #fff;
   line-height: 1.5;
-  text-align: center;
-}
-
-/* Couleurs spécifiques aux étapes */
-.step-1 .step-number,
-.step-1 .step-heading {
-  color: #ff4646;
-}
-.step-2 .step-number,
-.step-2 .step-heading {
-  color: #00dd77;
-}
-.step-3 .step-number,
-.step-3 .step-heading {
-  color: #ffb223;
 }
 
 /* Bouton d'appel à l'action */
@@ -826,31 +835,49 @@ footer {
   color: #68021a;
   padding: 10px 29px;
   border-radius: 34px;
-  min-height: 54px;
   font-size: 15px;
   font-weight: bold;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 54px;
   transition: background-color 0.3s, color 0.3s;
 }
-.btn-consultation:hover {
-  background-color: #ffa400;
-  color: #fff;
+/* Image Vector3 derrière le contenu mais au-dessus du background */
+.vector3-container {
+  position: absolute;
+  top: 160px; /* Ajustez selon vos besoins (peut être 150px, 200px, etc.) */
+  left: 0;
+  right: 130px;
+  text-align: center;
+  z-index: 1; /* Derrière .content-container qui a z-index:2 */
 }
 
-/* ------------------------------
-   RESPONSIVE
------------------------------- */
+/* Ajustez max-width pour redimensionner le swirl */
+.vector3-image {
+  max-width: 85%;
+  height: auto;
+}
+
+/* Le contenu principal (les steps) doit se trouver devant l'image Vector3 */
+.content-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive */
 @media (max-width: 767.98px) {
   .steps-title {
     font-size: 1.5rem;
   }
-  .icon-shape {
-    width: 40%;
-  }
   .icon-top-left {
     display: none;
+  }
+  .vector3-image {
+    display: none;
+  }
+  .icon-shape {
+    width: 40%;
   }
 }

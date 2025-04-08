@@ -1,77 +1,70 @@
-<section class="three-steps-section text-white position-relative" dir="rtl">
-    <!-- Icône décorative en haut à gauche -->
-    <div class="icon-top-left">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/iconSections.png"
-            alt="Icon Top Left"
-            class="icon-shape">
-    </div>
+<?php
+// Récupération des champs ACF du groupe "process home"
+$bg_process           = get_field('background_de_process');
+$titre_process        = get_field('titre_de_process');
+$process_repetetor    = get_field('process_repetetor');
+$text_button_process  = get_field('text_button_process');
 
-    <!-- Icône décorative en haut à droite -->
-    <div class="icon-top-right">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/iconSections.png"
-            alt="Icon Top Right"
-            class="icon-shape">
-    </div>
+// Traitement de l'image de fond (si le champ n'est pas renseigné, on utilise une image par défaut)
+$bg_process_url = $bg_process 
+    ? ( is_array($bg_process) && isset($bg_process['url']) ? esc_url($bg_process['url']) : esc_url($bg_process) )
+    : get_template_directory_uri() . '/assets/img/footer-red.png';
+?>
 
-    <div class="container py-5">
-        <!-- Titre principal de la section -->
-        <div class="row justify-content-center mb-4">
-            <div class="col-12 text-center">
-                <h2 class="steps-title">كيف تبدأ رحلتك معنا في ثلاث خطوات ؟</h2>
+<!-- Section Process Home -->
+<section class="process-home-section" style="background: linear-gradient(rgba(123, 4, 31, 0.7), rgba(123, 4, 31, 0.7)), url('<?php echo $bg_process_url; ?>'); background-size: cover; background-position: center;">
+    <div class="container py-5 text-white text-center">
+        
+        <!-- Titre principal -->
+        <?php if ( $titre_process ) : ?>
+            <div class="process-title mb-4">
+                <?php echo wp_kses_post($titre_process); ?>
             </div>
-        </div>
+        <?php endif; ?>
 
-        <!-- Les trois étapes -->
-        <div class="row gy-4">
-            <!-- Étape 1 -->
-            <div class="col-md-4 text-center">
-                <div class="step-box p-3">
-                    <div class="step-number">1.</div>
-                    <h3 class="step-heading">التوجيه</h3>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/step1.png" alt="التوجيه" class="step-image mb-3">
-                    <h4 class="step-subtitle">نحدد معًا وجهتك المثالية</h4>
-                    <p class="step-description">
-                        جلسة مجانية لتقييم طموحاتك، واختيار الجامعة والتخصص المناسبين،
-                        مع إجابة على جميع استفساراتك حول الدراسة والمنح بالخارج.
-                    </p>
-                </div>
+        <!-- Boucle sur les étapes du répéteur -->
+        <?php if ( $process_repetetor ) : ?>
+            <div class="row process-steps">
+                <?php $step_index = 1; foreach ( $process_repetetor as $step ) : ?>
+                    <div class="col-md-4 process-step mb-4">
+                        <!-- Numéro de l'étape -->
+                        <div class="step-number mb-2">.<?php echo $step_index; ?></div>
+                        
+                        <!-- Titre de l'étape -->
+                        <?php if ( !empty($step['titre_de_step']) ) : ?>
+                            <h3 class="step-heading mb-2"><?php echo esc_html($step['titre_de_step']); ?></h3>
+                        <?php endif; ?>
+
+                        <!-- Image de l'étape -->
+                        <?php if ( !empty($step['image_de_step']) ) : 
+                            $step_image = $step['image_de_step'];
+                            $step_image_url = is_array($step_image) && isset($step_image['url']) ? esc_url($step_image['url']) : esc_url($step_image);
+                        ?>
+                            <img src="<?php echo $step_image_url; ?>" alt="<?php echo esc_attr($step['titre_de_step']); ?>" class="img-fluid step-image mb-3" />
+                        <?php endif; ?>
+
+                        <!-- Sous-titre de l'étape -->
+                        <?php if ( !empty($step['sous_titre_de_step']) ) : ?>
+                            <h4 class="step-subtitle mb-2"><?php echo esc_html($step['sous_titre_de_step']); ?></h4>
+                        <?php endif; ?>
+
+                        <!-- Paragraphe descriptif -->
+                        <?php if ( !empty($step['paragraphe_de_step']) ) : ?>
+                            <div class="step-description"><?php echo wp_kses_post($step['paragraphe_de_step']); ?></div>
+                        <?php endif; ?>
+                    </div>
+                <?php $step_index++; endforeach; ?>
             </div>
+        <?php endif; ?>
 
-            <!-- Étape 2 -->
-            <div class="col-md-4 text-center">
-                <div class="step-box p-3">
-                    <div class="step-number">2.</div>
-                    <h3 class="step-heading">التسجيل</h3>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/step2.png" alt="التسجيل" class="step-image mb-3">
-                    <h4 class="step-subtitle">عنوان قصير أو جملة تحفيزية</h4>
-                    <p class="step-description">
-                        وصف مختصر للخطوة الثانية، مع توضيح الإجراءات والخطوات اللازمة
-                        لاستكمال العملية بنجاح.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Étape 3 -->
-            <div class="col-md-4 text-center">
-                <div class="step-box p-3">
-                    <div class="step-number">3.</div>
-                    <h3 class="step-heading">السفر</h3>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/step3.png" alt="السفر" class="step-image mb-3">
-                    <h4 class="step-subtitle">انطلق نحو المستقبل</h4>
-                    <p class="step-description">
-                        التجهيز للسفر والبدء في تجربة دراسية جديدة، خطوة نحو المستقبل.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bouton d’appel à l’action -->
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <a href="#" class="btn main-btn px-5 py-2">
-                    احجز استشارتك المجانية الآن
+        <!-- Bouton d'appel à l'action -->
+        <?php if ( $text_button_process ) : ?>
+            <div class="process-button mt-4">
+                <a href="#" class="btn btn-primary">
+                    <?php echo esc_html($text_button_process); ?>
                 </a>
             </div>
-        </div>
+        <?php endif; ?>
+        
     </div>
 </section>

@@ -4,6 +4,373 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* pour masquer le margin dans toute la page*/
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'FF Shamel Sans', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* ------------------------------
+  GLOBAL STYLES
+------------------------------ */
+.title {
+    font-size: 52px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+.video-trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0;
+}
+.mobile {
+    display: none;
+}
+/* ------------------------------
+  BANNER SECTION
+------------------------------ */
+.banner_section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.banner_section .sub_title {
+    font-size: 27px;
+    text-align: center;
+    margin: 20px 0;
+    color: #fff;
+}
+.banner_section .txt_list {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+.banner_section .cta-banner {
+    background-color: #ffb223;
+    color: #68021a;
+    padding: 10px 29px;
+    border-radius: 34px;
+    min-height: 54px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.banner_section .img_banner,
+.banner .img_banner {
+    position: absolute;
+    width: 330px;
+    height: 280px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.banner_section .img_banner img,
+.banner .img_banner img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.banner_section .right_image,
+.banner .right_image {
+    right: -10px;
+}
+
+.left_image_banner{
+    left: -10px;
+}
+.banner_section .benefit {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.is_homepage {
+    width: 50%;
+    height: 275px;
+    position: absolute;
+    bottom: -25%;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+.is_homepage .video-thumbnail {
+    width: 100%;
+    position: relative;
+}
+.is_homepage .video-thumbnail img {
+    width: 100%;
+}
+.is_homepage .video-thumbnail .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #fff;
+}
+.is_country_page {
+
+}
+/* ------------------------------
+  HEADER
+------------------------------ */
+.header {
+    border: none;
+    font-family: 'FF Shamel Sans', sans-serif;
+}
+
+.header.rtl {
+    direction: rtl; 
+}
+
+/* ------------------------------
+   NAVBAR CONTAINER
+ ------------------------------ */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+/* LOGO */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.navbar-brand a,
+.navbar-brand h1 {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ------------------------------
+   BOUTON BURGER (MOBILE)
+------------------------------ */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    left: 25px;
+}
+
+/* ------------------------------
+   NAVBAR COLLAPSE & MENU
+------------------------------ */
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar-menu li {
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-weight: 400;
+}
+
+.navbar-menu li a:hover {
+    color: #FFB223;
+    text-decoration: none;
+}
+
+/* ------------------------------
+  CTA BUTTON
+------------------------------ */
+.cta-button {
+    width: 190px;
+    height: auto;
+    border-radius: 32.77px;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+/* Affichage distinct selon le device */
+.cta-button.mobile {
+    display: none;
+}
+
+.cta-button.desktop {
+    display: block;
+}
+
+#closeMenu {
+    display: none
+}
+
+/* ------------------------------
+  main
+------------------------------ */
+main {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+    padding: 20px; */
+    background-color: #f0f0f0;
+}
+/* ------------------------------
+  FOOTER
+------------------------------ */
+footer {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'FF Shamel Sans', sans-serif;
+}
+.footer .plane {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+.footer iframe {
+    border-radius: 15px;
+}
+.footer.rtl {
+    direction: rtl;
+}
+/* ------------------------------
+   DESTINATION SECTION
+------------------------------ */
+.destination-section {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* Éventuellement, pour s’assurer de couper tout débordement horizontal :
+     overflow-x: hidden; 
+     À activer si nécessaire. */
+}
+
+/* Image de fond en haut : suppression des marges et padding */
+.background-top-destination img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pour remonter la rangée contenant les avatars et le texte */
+.avatar-row {
+  margin-top: -150px; /* Ajustez cette valeur selon votre design */
+}
+
+/* Avatar : dimension fixe pour éviter que le texte ne passe sur une autre ligne */
+.avatar-image {
+  width: 40%; /* Largeur fixe adaptée ; ajustez selon vos besoins */
+  height: auto;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+/* Couleur orange pour le texte de l'avatar */
+.text-orange {
+  color: #FC874D;
+  font-size: 20px;
+}
+
+/* Couleur violette pour le titre */
+.text-violet {
+  color: #7B041F;
+}
+
+/* Titre de la destination */
+.destination-title {
+  margin-bottom: 1.5rem;
+}
+
+/* Position relative pour le conteneur de la carte et du drapeau */
+.position-relative {
+  position: relative;
+}
+
+/* Image de la carte */
+.maps-overlay {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Drapeau positionné sur la carte */
+.flag-overlay {
+  position: absolute;
+  top: -5%;
+  left: 25%;
+  width: 50%;
+  height: auto;
+}
+
+/* Paragraphe descriptif (centré et limité en largeur) */
+.destination-paragraph {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Réduction de l'espace entre les flags et le texte descriptif */
+.description-row {
+  margin-top: 20px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* pour masquer le margin dans toute la page*/
+    overflow-x: hidden;
 }
 
 body {
@@ -365,73 +732,59 @@ footer {
 /* ------------------------------
    PROCESS SECTION
 ------------------------------ */
-
-/* SECTION GLOBALE */
 .three-steps-section {
-  overflow-x: hidden;
-  background-color: #7B041F; 
-  position: relative; /* Permet de positionner les icônes en absolu */
+  position: relative;
   padding: 2rem 0;
+  /* La variable CSS --bg contient l'image de fond définie dynamiquement */
+  background: linear-gradient(rgba(123, 4, 31, 0.7), rgba(123, 4, 31, 0.7)), var(--bg);
+  background-size: cover;
+  background-position: center;
 }
 
-/* TITRE PRINCIPAL */
-.steps-title {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-/* ICÔNES DÉCORATIVES */
+/* Icônes décoratives */
 .icon-top-left,
 .icon-top-right {
   position: absolute;
-  /* z-index: 2; Au-dessus du fond */
+  z-index: 2;
 }
 .icon-top-left {
-  position: absolute;
-  z-index: 2;
   top: 170px;
   left: -105px;
 }
-
-
 .icon-top-right {
   top: -20px;
-    right: 240px;
-  z-index: 1;
-
-  
+  right: 215px;
 }
-
 .icon-shape {
-  width: 50% ;/* Ajustez la taille selon vos besoins */
+  width: 50%;
   height: auto;
   display: block;
 }
 
-/* CONTENEUR DE CHAQUE ÉTAPE */
+/* Titre et étapes */
+.steps-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
 .step-box {
   background-color: transparent;
   border-radius: 8px;
   padding: 1.5rem;
 }
-
-/* NUMÉRO DE L’ÉTAPE */
 .step-number {
   font-size: 2rem;
-  color: #f26522;
   font-weight: bold;
   margin-bottom: 10px;
 }
-
-/* TITRE DE L’ÉTAPE */
 .step-heading {
   font-size: 1.3rem;
   margin: 10px 0;
+  font-weight: bold;
   color: #fff;
 }
-
-/* IMAGE DE L’ÉTAPE */
 .step-image {
   max-width: 150px;
   height: auto;
@@ -439,15 +792,13 @@ footer {
   margin: 0 auto 1rem;
   max-height: 100px;
 }
-
-/* SOUS-TITRE DE L’ÉTAPE */
 .step-subtitle {
   font-size: 1.1rem;
+  font-weight: bold;
   margin-bottom: 10px;
   color: #fff;
+  text-align: center;
 }
-
-/* PARAGRAPHE DESCRIPTIF */
 .step-description {
   font-size: 1rem;
   color: #fff;
@@ -455,23 +806,43 @@ footer {
   text-align: center;
 }
 
-/* BOUTON */
-.main-btn {
-  background-color: #f26522;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
+/* Couleurs spécifiques aux étapes */
+.step-1 .step-number,
+.step-1 .step-heading {
+  color: #ff4646;
+}
+.step-2 .step-number,
+.step-2 .step-heading {
+  color: #00dd77;
+}
+.step-3 .step-number,
+.step-3 .step-heading {
+  color: #ffb223;
+}
+
+/* Bouton d'appel à l'action */
+.btn-consultation {
+  background-color: #ffb223;
+  color: #68021a;
+  padding: 10px 29px;
+  border-radius: 34px;
+  min-height: 54px;
+  font-size: 15px;
+  font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  padding: 0.75rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn-consultation:hover {
+  background-color: #ffa400;
+  color: #fff;
 }
 
-.main-btn:hover {
-  background-color: #d9561d;
-}
-
-/* RESPONSIVE */
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
 @media (max-width: 767.98px) {
   .steps-title {
     font-size: 1.5rem;
@@ -479,5 +850,7 @@ footer {
   .icon-shape {
     width: 40%;
   }
+  .icon-top-left {
+    display: none;
+  }
 }
-

@@ -17,16 +17,47 @@
     top: 0;
     left: -100%;
     height: 100vh;
-    background-color: #70021C;
-    width: 100%;
+    background-color: #fff;
+    width: 85%;
     padding: 20px;
-    display: flex;
+    display: block;
     flex-direction: column;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     transition: left 0.5s ease;
     z-index: 1000;
-    flex-direction: column;
-    justify-content: flex-start;
+    opacity: 0.95;
+    font-size: 17px;
+  }
+
+  .navbar-collapse .language-dropdown-wrapper {
+    display: none;
+  }
+
+  .navbar-collapse .social_contact {
+    padding: 15px;
+  }
+
+  .navbar-collapse .icon-rounded {
+    border: 1px solid #70021C;
+    color: #70021C;
+  }
+  .navbar-collapse .social_contact p {
+    font-size: 15px;
+    color: #70021C;
+  }
+  .navbar-collapse .footer_social_title {
+    height: 70px;
+  }
+  .navbar-collapse .text-warning {
+    color: #FE2F07 !important;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .navbar-menu li a {
+    color: #70021C;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 15px;
   }
 
   .navbar-collapse.active {
@@ -35,8 +66,12 @@
 
   .navbar-menu {
     flex-direction: column;
-    margin-top: 20px;
     gap: 20px;
+    padding: 30% 15px 15px 15px;
+  }
+
+  .rtl .navbar-menu {
+    direction: rtl;
   }
 
   .cta-button.desktop {
@@ -55,8 +90,41 @@
     right: 20px;
     outline: 0;
     font-size: 1.3rem;
+    padding: 15px;
   }
 
+  .rtl .language-dropdown-wrapper,
+  .language-dropdown-wrapper {
+    margin: 0;
+  }
+
+  .footer {
+    height: auto;
+  }
+
+  .footer .footer-top {
+    padding: 20px;
+  }
+
+  .footer .text-warning {
+     font-size: 17px;
+     font-weight: bold;
+  }
+
+ .footer p {
+    font-size: 15px;
+  }
+  .footer .plane {
+    background-size: contain;
+    background-position: 100% 100%;
+    height:300px;
+    background-repeat: no-repeat;
+  }
+  .footer .map-embed {
+    width: 271px;
+    height: 240px;
+    margin: 40px 0;
+  }
   /* ------------------------------
   GLOBAL STYLES
 ------------------------------ */

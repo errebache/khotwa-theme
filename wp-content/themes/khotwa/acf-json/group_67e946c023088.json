@@ -1,0 +1,513 @@
+{
+    "key": "group_67e946c023088",
+    "title": "Footer parametter",
+    "fields": [
+        {
+            "key": "field_67e946c1fa4a4",
+            "label": "footer_map_iframe",
+            "name": "footer_map_iframe",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Code iframe Google Maps",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e947006e539",
+            "label": "footer_social_title",
+            "name": "footer_social_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "منصاتنا",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e947196e53a",
+            "label": "footer_social_icons",
+            "name": "footer_social_icons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67e947c26e53c",
+                    "label": "link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_67e947196e53a"
+                },
+                {
+                    "key": "field_67f6586466d7a",
+                    "label": "social_icon",
+                    "name": "social_icon",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_67e947196e53a"
+                }
+            ]
+        },
+        {
+            "key": "field_67e947dc6e53d",
+            "label": "footer_contact_title",
+            "name": "footer_contact_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "اتصل بنا",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e947f36e53e",
+            "label": "footer_phone_fix_label",
+            "name": "footer_phone_fix_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "الهاتف الثابت",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e948346e53f",
+            "label": "footer_phone_fix_value",
+            "name": "footer_phone_fix_value",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "+212 (0) 524 303 774",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e948be6e540",
+            "label": "footer_phone_mobile_label",
+            "name": "footer_phone_mobile_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "الهاتف المحمول",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e948e66e541",
+            "label": "footer_phone_mobile_value",
+            "name": "footer_phone_mobile_value",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "+212 (0) 524 302 591",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e949206e542",
+            "label": "footer_address_title",
+            "name": "footer_address_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "العنوان",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e949316e543",
+            "label": "footer_address_text",
+            "name": "footer_address_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": " المكتب رقم 8، الطابق الثاني 27 شارع وادي ملوية، أكدال الرباط 10080",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e949586e544",
+            "label": "footer_hours_title",
+            "name": "footer_hours_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "توقيت العمل",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e9496d6e545",
+            "label": "footer_hours_weekdays",
+            "name": "footer_hours_weekdays",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "( 18:00 - 10 : 00 ) الاثنين - الجمعة",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e949876e546",
+            "label": "footer_hours_saturday",
+            "name": "footer_hours_saturday",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "( 14 : 00 - 10 : 00 )  السبت",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e94c979fc8a",
+            "label": "default footer background",
+            "name": "default_footer_background",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "use default background footer (RED \/ BLUE)",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_67e94ad23afbe",
+            "label": "footer_bg_color",
+            "name": "footer_bg_color",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67e94c979fc8a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": 1440,
+            "min_height": 600,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_67e94b425ac08",
+            "label": "Footer background",
+            "name": "footer_select_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67e94c979fc8a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "footer_red": "footer_red",
+                "footer_blue": "footer_blue"
+            },
+            "default_value": "footer_rd",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67e94ff9ca452",
+            "label": "footer_image",
+            "name": "footer_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67e94c979fc8a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_67f66430f6844",
+            "label": "footer_image_mobile",
+            "name": "footer_image_mobile",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "index.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-template\/page_template_country.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-template\/page_template_home.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-template\/page_template_service.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1744200844
+}

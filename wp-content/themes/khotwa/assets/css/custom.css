@@ -866,18 +866,134 @@ footer {
   z-index: 2;
 }
 
-/* Responsive */
-@media (max-width: 767.98px) {
-  .steps-title {
-    font-size: 1.5rem;
-  }
-  .icon-top-left {
-    display: none;
-  }
-  .vector3-image {
-    display: none;
-  }
-  .icon-shape {
-    width: 40%;
-  }
+/* ------------------------------
+   TESTIMONIAL SECTION - Desktop
+------------------------------ */
+
+/* Section principale commune */
+.testimonial-section {
+  background-color: #fff;
+  position: relative;
+  overflow: visible;
+  padding-top: 180px; /* Espace pour l'image décorative sur desktop */
+}
+
+/* Image décorative en haut */
+.testimonial-top-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+.testimonial-top-bg img {
+  width: 100%;
+  position: absolute;
+  top: 0; /* Affiche l'image intégralement en haut */
+  object-fit: cover;
+  display: block;
+}
+
+/* Icônes décoratives (uniquement en desktop) */
+.testimonial-top-right {
+  position: absolute;
+  top: -25px;
+  right: 110px;
+  z-index: 3;
+}
+.testimonial-top-right .testimonial-shape {
+  max-width: 60%;
+  width: 100%;
+}
+.testimonial-bottom-left {
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  z-index: 3;
+}
+.testimonial-bottom-left .testimonial-shape {
+  max-width: 60%;
+  width: 100%;
+}
+
+/* Conteneur principal */
+.content-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Titre principal en orange (affiché sur desktop) */
+.testimonial-main-title {
+  color: #f05123;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Styles des textes */
+.testimonial-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #68021a;
+  margin-bottom: 0.5rem;
+}
+.testimonial-role {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+  margin-top: 1rem;
+}
+
+/* Image du témoignage */
+.testimonial-img {
+  max-width: 80%;
+  margin: 0 auto;
+  border-radius: 5%;
+}
+
+/* Bouton Play */
+.play-btn {
+  position: absolute;
+  top: 86%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.play-btn:hover {
+  color: #f05123;
+}
+
+/* Boutons de navigation circulaires */
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #666;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  margin: 0 5px;
+}
+.btn-circle:hover {
+  border-color: #f05123;
+  color: #f05123;
+}
+
+/* Alignement général en RTL */
+.testimonial-section[dir="rtl"] .content-container {
+  text-align: right;
 }

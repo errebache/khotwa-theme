@@ -155,3 +155,20 @@ BANNER SECTION
     margin-top: 10px;
   }
 }
+/* ------------------------------
+   PROCESS SECTION
+------------------------------ */
+@media (max-width: 767.98px) {
+  .steps-title {
+    font-size: 1.5rem;
+  }
+  .icon-top-left {
+    display: none;
+  }
+  .vector3-image {
+    display: none;
+  }
+  .icon-shape {
+    width: 40%;
+  }
+}

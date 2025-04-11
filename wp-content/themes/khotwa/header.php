@@ -32,6 +32,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <?php wp_head(); ?>
 
     <style>
@@ -76,6 +79,9 @@
             <!-- HEADER -->
             <header class="header <?php echo $direction_class; ?>">
                 <div class="navbar-container">
+                    <div class="mobile">
+                        <?php get_template_part('template-parts/common/select_language'); ?>
+                    </div>
                     <!-- LOGO -->
                     <div class="navbar-brand">
                         <?php if (has_custom_logo()) : ?>
@@ -94,7 +100,9 @@
 
                     <!-- MENU NAVBAR -->
                     <div class="navbar-collapse">
-                        <button id="closeMenu" type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+                        <button id="closeMenu" type="button">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/close.png" alt="Icône close">
+                        </button>
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'main-menu',
@@ -103,18 +111,12 @@
                             'fallback_cb'    => false,
                         ));
                         ?>
-                        <?php
-                        $langs = pll_the_languages(['raw' => 1]);
+                        <?php get_template_part('template-parts/common/select_language'); ?>
 
-                        $flags = [
-                            'fr' => 'http://khotwa.local/wp-content/plugins/polylang/flags/fr.png',
-                            'ar' => 'http://khotwa.local/wp-content/plugins/polylang/flags/arab.png',
-                        ];
-                        ?>
-                        <!-- Bouton CTA pour mobile intégré dans le menu -->
-                        <button class="cta-button mobile">
-                            <?php echo esc_html($cta_button_text); ?>
-                        </button>
+                        <div class="mobile social_contact mt-5">
+                           <?php get_template_part('template-parts/common/social_contact'); ?> 
+                        </div>
+
                     </div>
 
                     <!-- Bouton CTA pour desktop -->

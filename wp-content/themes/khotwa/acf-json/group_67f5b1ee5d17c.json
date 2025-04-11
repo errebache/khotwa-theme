@@ -1,11 +1,11 @@
 {
-    "key": "group_67f3deee3324e",
-    "title": "process",
+    "key": "group_67f5b1ee5d17c",
+    "title": "testimonial",
     "fields": [
         {
-            "key": "field_67f3e44dadf12",
-            "label": "image background",
-            "name": "image_background",
+            "key": "field_67f5b1f0edab5",
+            "label": "image top section testimonial",
+            "name": "image_top_section_testimonial",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -25,15 +25,15 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "allow_in_bindings": 1,
+            "allow_in_bindings": 0,
             "preview_size": "medium"
         },
         {
-            "key": "field_67f3e3a5804de",
-            "label": "titre process",
-            "name": "titre_process",
+            "key": "field_67f69afe396d0",
+            "label": "titre testimonial",
+            "name": "titre_testimonial",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -43,16 +43,35 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
             "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_67f3deee63a22",
-            "label": "steps process",
-            "name": "steps_process",
+            "key": "field_67f5b2dfedabc",
+            "label": "couleur next previous buttons",
+            "name": "couleur_next_previous_buttons",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_67f5b23fedab6",
+            "label": "testimonial repetetor",
+            "name": "testimonial_repetetor",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -68,35 +87,13 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Ajouter un élément",
+            "button_label": "Add Row",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_67f3e04b63a24",
-                    "label": "titre step",
-                    "name": "titre_step",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_67f3deee63a22"
-                },
-                {
-                    "key": "field_67f3e06363a25",
-                    "label": "image step",
-                    "name": "image_step",
+                    "key": "field_67f5b25bedab7",
+                    "label": "background video testimonial",
+                    "name": "background_video_testimonial",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -116,14 +113,33 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "allow_in_bindings": 1,
+                    "allow_in_bindings": 0,
                     "preview_size": "medium",
-                    "parent_repeater": "field_67f3deee63a22"
+                    "parent_repeater": "field_67f5b23fedab6"
                 },
                 {
-                    "key": "field_67f3e07263a26",
-                    "label": "sous titre step",
-                    "name": "sous_titre_step",
+                    "key": "field_67f5b27aedab8",
+                    "label": "url video testimonial",
+                    "name": "url_video_testimonial",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_67f5b23fedab6"
+                },
+                {
+                    "key": "field_67f5b28fedab9",
+                    "label": "nom de l'etudiant",
+                    "name": "nom_de_letudiant",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -140,12 +156,12 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_67f3deee63a22"
+                    "parent_repeater": "field_67f5b23fedab6"
                 },
                 {
-                    "key": "field_67f3e098e1419",
-                    "label": "paragraphe step",
-                    "name": "paragraphe_step",
+                    "key": "field_67f5b2a8edaba",
+                    "label": "status etudiant",
+                    "name": "status_etudiant",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -162,14 +178,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_67f3deee63a22"
+                    "parent_repeater": "field_67f5b23fedab6"
                 },
                 {
-                    "key": "field_67f3e0abe141a",
-                    "label": "button text process",
-                    "name": "button_text_process",
+                    "key": "field_67f5b2baedabb",
+                    "label": "testimonial paragraphe",
+                    "name": "testimonial_paragraphe",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -179,12 +195,12 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_67f3deee63a22"
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_67f5b23fedab6"
                 }
             ]
         }
@@ -207,5 +223,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744036986
+    "modified": 1744285013
 }

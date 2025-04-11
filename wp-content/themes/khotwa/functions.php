@@ -41,7 +41,12 @@ function khotwa_enqueue_assets() {
 
     // Feuille de style principale
     wp_enqueue_style('main-style', get_stylesheet_uri());
-
+    wp_enqueue_style(
+        'bootstrap-icons',
+        'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css',
+        array(),
+        '1.10.5'
+    );
     // Styles personnalisés
     wp_enqueue_style('custom-style', get_template_directory_uri() . '/assets/css/custom.css', array('main-style', 'bootstrap-css'), null);
     wp_enqueue_style('responsive-style', get_template_directory_uri() . '/assets/css/responsive.css', array('main-style', 'bootstrap-css', 'custom-style'), null);
@@ -82,4 +87,7 @@ add_action('init', function() {
     $test = get_field('footer_social_title', 'option');
     error_log('footer_social_title from init: ' . $test);
 });
+
+
+
 

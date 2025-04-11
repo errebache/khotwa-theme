@@ -50,6 +50,25 @@
             "delay": 0
         },
         {
+            "key": "field_67f5b2dfedabc",
+            "label": "couleur next previous buttons",
+            "name": "couleur_next_previous_buttons",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
             "key": "field_67f5b23fedab6",
             "label": "testimonial repetetor",
             "name": "testimonial_repetetor",
@@ -182,26 +201,6 @@
                     "media_upload": 1,
                     "delay": 0,
                     "parent_repeater": "field_67f5b23fedab6"
-                },
-                {
-                    "key": "field_67f5b2dfedabc",
-                    "label": "couleur next previous buttons",
-                    "name": "couleur_next_previous_buttons",
-                    "aria-label": "",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "enable_opacity": 0,
-                    "return_format": "string",
-                    "allow_in_bindings": 0,
-                    "parent_repeater": "field_67f5b23fedab6"
                 }
             ]
         }
@@ -224,5 +223,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744214817
+    "modified": 1744285013
 }
